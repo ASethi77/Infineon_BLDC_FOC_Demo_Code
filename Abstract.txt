@@ -1,0 +1,9 @@
+/********************************************************************************/
+/** BLDC: Motor Drive with Sensorless FOC for the QBL4208-61-04-013 motor      **/
+/********************************************************************************/
+/** Use the Poti to start/stop and speed up the motor.                         **/
+/** When using the example as is, the motor spins in one direction. To make it **/
+/** turn in the other direction, replace 'Emo_setspeedreferenz(mV / 2)' with   **/
+/** 'Emo_setspeedreferenz(-mV / 2) in main.c, line 137.                        **/
+/********************************************************************************/
+

@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<configuration xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">
+
+  <packages/>
+
+  <device Dclock="40000000" Dcore="Cortex-M3" DcoreVersion="r0p0" Dendian="Little-endian" Dfamily="TLE98xx Series" Dfpu="NO_FPU" Dmpu="NO_MPU" Dname="TLE9879QXA40" DsubFamily="TLE987x Series" Dvendor="Infineon:7" info="ARM , 5 KB RAM, 128 KB ROM" url="http://www.keil.com/dd2/infineon/tle9879qxa40">
+
+    <package info="Infineon TLE987x Series Device Support" name="TLE987x_DFP" url="https://www.infineon.com/cmsis_packs/TLE987x/" vendor="Infineon" version="1.5.0"/>
+
+  </device>
+
+  <toolchain Tcompiler="IAR" Toutput="exe"/>
+
+  <components>
+
+    <component Cclass="CMSIS" Cgroup="CORE" Cvendor="ARM" Cversion="5.4.0">
+
+      <package name="CMSIS" url="http://www.keil.com/pack/" vendor="ARM" version="5.7.0"/>
+
+      <file category="doc" name="CMSIS/Documentation/Core/html/index.html"/>
+
+      <file category="include" name="CMSIS/Core/Include/"/>
+
+      <file category="header" condition="TrustZone" name="CMSIS/Core/Include/tz_context.h"/>
+
+      <file attr="template" category="sourceC" condition="TZ Secure" name="CMSIS/Core/Template/ARMv8-M/main_s.c" select="Secure mode 'main' module for ARMv8-M" version="1.1.1"/>
+
+      <file attr="template" category="sourceC" condition="TZ Secure" name="CMSIS/Core/Template/ARMv8-M/tz_context.c" select="RTOS Context Management (TrustZone for ARMv8-M)" version="1.1.1"/>
+
+    </component>
+
+    <component Cclass="Device" Cgroup="ConfigWizard_v2" Cvendor="Infineon" Cversion="2.1.12" deviceDependent="1">
+
+      <package name="TLE987x_DFP" url="https://www.infineon.com/cmsis_packs/TLE987x/" vendor="Infineon" version="1.5.0"/>
+
+      <file attr="config" category="doc" condition="cond_TLE987x_noSDADC_40MHz" deviceDependent="1" name="Device/SDK/cfgwiz/TLE987x_40/v2/config.icwp" version="1.8.6"/>
+
+      <file attr="config" category="doc" condition="cond_TLE987x_noSDADC" deviceDependent="1" name="Device/SDK/cfgwiz/script/v2/TLE987x.svd" version="4.1.0"/>
+
+      <file attr="config" category="doc" condition="cond_TLE987x_noSDADC" deviceDependent="1" name="Device/SDK/cfgwiz/script/v2/ICW_TLE987x.xml" version="2.1.9"/>
+
+      <file attr="config" category="doc" condition="cond_TLE987x_noSDADC" deviceDependent="1" name="Device/SDK/cfgwiz/script/v2/TLE987x.mig" version="2.0.5"/>
+
+      <file attr="config" category="header" condition="cond_TLE987x_40MHz" deviceDependent="1" name="Device/SDK/cfgwiz/TLE987x_40/v2/ccu6_defines.h" version="1.8.6"/>
+
+      <file attr="config" category="header" condition="cond_TLE987x_noSDADC_40MHz" deviceDependent="1" name="Device/SDK/cfgwiz/TLE987x_40/v2/isr_defines.h" version="1.8.6"/>
+
+      <file attr="config" category="header" condition="cond_TLE987x_40MHz" deviceDependent="1" name="Device/SDK/cfgwiz/TLE987x_40/v2/lin_defines.h" version="1.8.6"/>
+
+      <file attr="config" category="header" condition="cond_TLE987x_40MHz" deviceDependent="1" name="Device/SDK/cfgwiz/TLE987x_40/v2/ssc_defines.h" version="1.8.6"/>
+
+      <file attr="config" category="header" condition="cond_TLE987x_40MHz" deviceDependent="1" name="Device/SDK/cfgwiz/TLE987x_40/v2/timer2x_defines.h" version="1.8.6"/>
+
+      <file attr="config" category="header" condition="cond_TLE987x_40MHz" deviceDependent="1" name="Device/SDK/cfgwiz/TLE987x_40/v2/uart_defines.h" version="1.8.6"/>
+
+      <file attr="config" category="header" condition="cond_TLE987x_40MHz" deviceDependent="1" name="Device/SDK/cfgwiz/TLE987x_40/v2/bsl_defines.h" version="1.8"/>
+
+      <file attr="config" category="header" condition="cond_TLE987x_40MHz" deviceDependent="1" name="Device/SDK/cfgwiz/TLE987x_40/v2/scu_defines.h" version="1.8.6"/>
+
+      <file attr="config" category="header" condition="cond_TLE987x_40MHz" deviceDependent="1" name="Device/SDK/cfgwiz/TLE987x_40/v2/pmu_defines.h" version="1.8.6"/>
+
+      <file attr="config" category="header" condition="cond_TLE987x_40MHz" deviceDependent="1" name="Device/SDK/cfgwiz/TLE987x_40/v2/adc1_defines.h" version="1.8.6"/>
+
+      <file attr="config" category="header" condition="cond_TLE987x_40MHz" deviceDependent="1" name="Device/SDK/cfgwiz/TLE987x_40/v2/adc2_defines.h" version="1.8.6"/>
+
+      <file attr="config" category="header" condition="cond_TLE987x_40MHz" deviceDependent="1" name="Device/SDK/cfgwiz/TLE987x_40/v2/bdrv_defines.h" version="1.8.6"/>
+
+      <file attr="config" category="header" condition="cond_TLE987x_40MHz" deviceDependent="1" name="Device/SDK/cfgwiz/TLE987x_40/v2/csa_defines.h" version="1.8.6"/>
+
+      <file attr="config" category="header" condition="cond_TLE987x_40MHz" deviceDependent="1" name="Device/SDK/cfgwiz/TLE987x_40/v2/gpt12e_defines.h" version="1.8.6"/>
+
+      <file attr="config" category="header" condition="cond_TLE987x_40MHz" deviceDependent="1" name="Device/SDK/cfgwiz/TLE987x_40/v2/int_defines.h" version="1.8.6"/>
+
+      <file attr="config" category="header" condition="cond_TLE987x_40MHz" deviceDependent="1" name="Device/SDK/cfgwiz/TLE987x_40/v2/mon_defines.h" version="1.8.6"/>
+
+      <file attr="config" category="header" condition="cond_TLE987x_40MHz" deviceDependent="1" name="Device/SDK/cfgwiz/TLE987x_40/v2/port_defines.h" version="1.8.6"/>
+
+      <file attr="config" category="header" condition="cond_TLE987x_40MHz" deviceDependent="1" name="Device/SDK/cfgwiz/TLE987x_40/v2/timer3_defines.h" version="1.8.6"/>
+
+      <file attr="config" category="header" condition="cond_TLE987x_40MHz" deviceDependent="1" name="Device/SDK/cfgwiz/TLE987x_40/v2/dma_defines.h" version="1.8.6"/>
+
+    </component>
+
+    <component Cclass="Device" Cgroup="SDK" Csub="ADC1" Cvendor="Infineon" Cversion="0.2.7" deviceDependent="1">
+
+      <package name="TLE987x_DFP" url="https://www.infineon.com/cmsis_packs/TLE987x/" vendor="Infineon" version="1.5.0"/>
+
+      <file attr="config" category="header" deviceDependent="1" name="Device/SDK/inc/adc1.h" version="0.2.7"/>
+
+      <file attr="config" category="source" deviceDependent="1" name="Device/SDK/src/adc1.c" version="0.2.7"/>
+
+    </component>
+
+    <component Cclass="Device" Cgroup="SDK" Csub="ADC2" Cvendor="Infineon" Cversion="0.2.4" deviceDependent="1">
+
+      <package name="TLE987x_DFP" url="https://www.infineon.com/cmsis_packs/TLE987x/" vendor="Infineon" version="1.5.0"/>
+
+      <file attr="config" category="header" deviceDependent="1" name="Device/SDK/inc/adc2.h" version="0.2.4"/>
+
+      <file attr="config" category="source" deviceDependent="1" name="Device/SDK/src/adc2.c" version="0.2.4"/>
+
+    </component>
+
+    <component Cclass="Device" Cgroup="SDK" Csub="BDRV" Cvendor="Infineon" Cversion="0.4.5" deviceDependent="1">
+
+      <package name="TLE987x_DFP" url="https://www.infineon.com/cmsis_packs/TLE987x/" vendor="Infineon" version="1.5.0"/>
+
+      <file attr="config" category="header" deviceDependent="1" name="Device/SDK/inc/bdrv.h" version="0.4.5"/>
+
+      <file attr="config" category="source" deviceDependent="1" name="Device/SDK/src/bdrv.c" version="0.4.5"/>
+
+    </component>
+
+    <component Cclass="Device" Cgroup="SDK" Csub="BOOTROM" Cvendor="Infineon" Cversion="0.3.0" deviceDependent="1">
+
+      <package name="TLE987x_DFP" url="https://www.infineon.com/cmsis_packs/TLE987x/" vendor="Infineon" version="1.5.0"/>
+
+      <file attr="config" category="header" deviceDependent="1" name="Device/SDK/inc/bootrom.h" version="0.3.0"/>
+
+      <file attr="config" category="source" deviceDependent="1" name="Device/SDK/src/bootrom.c" version="0.3.0"/>
+
+    </component>
+
+    <component Cclass="Device" Cgroup="SDK" Csub="CCU6" Cvendor="Infineon" Cversion="0.3.2" deviceDependent="1">
+
+      <package name="TLE987x_DFP" url="https://www.infineon.com/cmsis_packs/TLE987x/" vendor="Infineon" version="1.5.0"/>
+
+      <file attr="config" category="header" deviceDependent="1" name="Device/SDK/inc/ccu6.h" version="0.3.2"/>
+
+      <file attr="config" category="source" deviceDependent="1" name="Device/SDK/src/ccu6.c" version="0.3.2"/>
+
+    </component>
+
+    <component Cclass="Device" Cgroup="SDK" Csub="CSA" Cvendor="Infineon" Cversion="0.1.6" deviceDependent="1">
+
+      <package name="TLE987x_DFP" url="https://www.infineon.com/cmsis_packs/TLE987x/" vendor="Infineon" version="1.5.0"/>
+
+      <file attr="config" category="header" deviceDependent="1" name="Device/SDK/inc/csa.h" version="0.1.6"/>
+
+      <file attr="config" category="source" deviceDependent="1" name="Device/SDK/src/csa.c" version="0.1.6"/>
+
+    </component>
+
+    <component Cclass="Device" Cgroup="SDK" Csub="GPT12E" Cvendor="Infineon" Cversion="0.2.0" deviceDependent="1">
+
+      <package name="TLE987x_DFP" url="https://www.infineon.com/cmsis_packs/TLE987x/" vendor="Infineon" version="1.5.0"/>
+
+      <file attr="config" category="header" deviceDependent="1" name="Device/SDK/inc/gpt12e.h" version="0.2.0"/>
+
+      <file attr="config" category="source" deviceDependent="1" name="Device/SDK/src/gpt12e.c" version="0.2.0"/>
+
+    </component>
+
+    <component Cclass="Device" Cgroup="SDK" Csub="INT" Cvendor="Infineon" Cversion="0.2.2" deviceDependent="1">
+
+      <package name="TLE987x_DFP" url="https://www.infineon.com/cmsis_packs/TLE987x/" vendor="Infineon" version="1.5.0"/>
+
+      <file attr="config" category="header" deviceDependent="1" name="Device/SDK/inc/int.h" version="0.2.2"/>
+
+      <file attr="config" category="source" deviceDependent="1" name="Device/SDK/src/int.c" version="0.2.2"/>
+
+    </component>
+
+    <component Cclass="Device" Cgroup="SDK" Csub="ISR" Cvendor="Infineon" Cversion="0.2.8" deviceDependent="1">
+
+      <package name="TLE987x_DFP" url="https://www.infineon.com/cmsis_packs/TLE987x/" vendor="Infineon" version="1.5.0"/>
+
+      <file attr="config" category="header" deviceDependent="1" name="Device/SDK/inc/isr.h" version="0.2.8"/>
+
+      <file attr="config" category="source" deviceDependent="1" name="Device/SDK/src/isr.c" version="0.2.8"/>
+
+    </component>
+
+    <component Cclass="Device" Cgroup="SDK" Csub="LIN" Cvendor="Infineon" Cversion="0.1.9" deviceDependent="1">
+
+      <package name="TLE987x_DFP" url="https://www.infineon.com/cmsis_packs/TLE987x/" vendor="Infineon" version="1.5.0"/>
+
+      <file attr="config" category="header" deviceDependent="1" name="Device/SDK/inc/lin.h" version="0.1.9"/>
+
+      <file attr="config" category="source" deviceDependent="1" name="Device/SDK/src/lin.c" version="0.1.9"/>
+
+    </component>
+
+    <component Cclass="Device" Cgroup="SDK" Csub="MON" Cvendor="Infineon" Cversion="0.1.6" deviceDependent="1">
+
+      <package name="TLE987x_DFP" url="https://www.infineon.com/cmsis_packs/TLE987x/" vendor="Infineon" version="1.5.0"/>
+
+      <file attr="config" category="header" deviceDependent="1" name="Device/SDK/inc/mon.h" version="0.1.6"/>
+
+      <file attr="config" category="source" deviceDependent="1" name="Device/SDK/src/mon.c" version="0.1.6"/>
+
+    </component>
+
+    <component Cclass="Device" Cgroup="SDK" Csub="PMU" Cvendor="Infineon" Cversion="0.2.0" deviceDependent="1">
+
+      <package name="TLE987x_DFP" url="https://www.infineon.com/cmsis_packs/TLE987x/" vendor="Infineon" version="1.5.0"/>
+
+      <file attr="config" category="header" deviceDependent="1" name="Device/SDK/inc/pmu.h" version="0.2.0"/>
+
+      <file attr="config" category="source" deviceDependent="1" name="Device/SDK/src/pmu.c" version="0.2.0"/>
+
+    </component>
+
+    <component Cclass="Device" Cgroup="SDK" Csub="PORT" Cvendor="Infineon" Cversion="0.5.7" deviceDependent="1">
+
+      <package name="TLE987x_DFP" url="https://www.infineon.com/cmsis_packs/TLE987x/" vendor="Infineon" version="1.5.0"/>
+
+      <file attr="config" category="header" deviceDependent="1" name="Device/SDK/inc/port.h" version="0.5.7"/>
+
+      <file attr="config" category="source" deviceDependent="1" name="Device/SDK/src/port.c" version="0.5.7"/>
+
+    </component>
+
+    <component Cclass="Device" Cgroup="SDK" Csub="SCU" Cvendor="Infineon" Cversion="0.5.2" deviceDependent="1">
+
+      <package name="TLE987x_DFP" url="https://www.infineon.com/cmsis_packs/TLE987x/" vendor="Infineon" version="1.5.0"/>
+
+      <file attr="config" category="header" deviceDependent="1" name="Device/SDK/inc/scu.h" version="0.5.2"/>
+
+      <file attr="config" category="source" deviceDependent="1" name="Device/SDK/src/scu.c" version="0.5.2"/>
+
+    </component>
+
+    <component Cclass="Device" Cgroup="SDK" Csub="WDT1" Cvendor="Infineon" Cversion="0.3.1" deviceDependent="1">
+
+      <package name="TLE987x_DFP" url="https://www.infineon.com/cmsis_packs/TLE987x/" vendor="Infineon" version="1.5.0"/>
+
+      <file attr="config" category="header" deviceDependent="1" name="Device/SDK/inc/wdt1.h" version="0.3.1"/>
+
+      <file attr="config" category="source" deviceDependent="1" name="Device/SDK/src/wdt1.c" version="0.3.1"/>
+
+    </component>
+
+    <component Cclass="Device" Cgroup="Startup" Cvendor="Infineon" Cversion="1.1.0" deviceDependent="1">
+
+      <package name="TLE987x_DFP" url="https://www.infineon.com/cmsis_packs/TLE987x/" vendor="Infineon" version="1.5.0"/>
+
+      <file attr="config" category="source" condition="cond_TLE987x_IAR" deviceDependent="1" name="Device/Source/IAR/startup_tle987x.s" version="1.1.0"/>
+
+      <file attr="config" category="source" deviceDependent="1" name="Device/Source/system_tle987x.c" version="0.4.6"/>
+
+      <file attr="config" category="header" deviceDependent="1" name="Device/Include/system_tle987x.h" version="0.4.6"/>
+
+      <file attr="config" category="source" deviceDependent="1" name="Device/Source/tle_device.c" version="1.1.1"/>
+
+      <file attr="config" category="header" deviceDependent="1" name="Device/Include/tle_device.h" version="1.1.1"/>
+
+      <file attr="config" category="header" deviceDependent="1" name="Device/Include/tle_variants.h" version="0.2.1"/>
+
+      <file attr="config" category="source" deviceDependent="1" name="Device/Include/sfr_access.h" version="0.1.2"/>
+
+      <file attr="config" category="header" deviceDependent="1" name="Device/Include/types.h" version="0.2.7"/>
+
+      <file attr="config" category="header" deviceDependent="1" name="Device/Include/eval_board.h" version="0.1.1"/>
+
+      <file attr="config" category="header" deviceDependent="1" name="Device/Include/cmsis_misra.h" version="0.1.4"/>
+
+      <file attr="config" category="header" deviceDependent="1" name="Device/Include/tle987x.h" version="3.0.7"/>
+
+      <file attr="template" category="sourceC" deviceDependent="1" name="Device/SDK/app/main.c" select="Simple Main" version="1.0.0"/>
+
+      <file category="doc" deviceDependent="1" name="Documents/html/index.html"/>
+
+    </component>
+
+  </components>
+
+  <apis/>
+
+</configuration>
+
